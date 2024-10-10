@@ -1,1 +1,18 @@
-<p>inactive-posts works!</p>
+<h2 class="text-center mt-5 mb-3">Post Inattivi</h2>
+
+<!-- ciclo tutti i post -->
+
+<div class="container d-flex flex-wrap">
+  <div class="card w-25" *ngFor="let one of arrayOther">
+    <div class="card-body">
+      <p class="card-id">id: {{ one.id }}</p>
+      <h5 class="card-title">{{ one.title }}</h5>
+      <p class="card-text">
+        {{ one.body }}
+      </p>
+      <button [routerLink]="['/post-detail', one.id]" class="btn btn-info">
+        Details
+      </button>
+    </div>
+  </div>
+</div>

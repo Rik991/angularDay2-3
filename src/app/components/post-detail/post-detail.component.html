@@ -1,1 +1,6 @@
-<p>post-detail works!</p>
+<ng-container *ngIf="posts">
+  <h1>Dettagli</h1>
+  <h2>TITOLO: {{ post.title }}</h2>
+  <h3>BODY: {{ post.body }}</h3>
+  <h2>SKILL: {{ post.tags }}</h2>
+</ng-container>
